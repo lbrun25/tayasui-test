@@ -16,10 +16,13 @@ class RecipeTableViewCell: UITableViewCell {
     func setStarStackView(score: UInt8) {
         for (index, view) in starsStackView.subviews.enumerated() {
              if let imageView = view as? UIImageView {
-                 imageView.tintColor = .gray
+                 imageView.tintColor = UIColor(red: 0.64, green: 0.64, blue: 0.64, alpha: 1.00)
                  if index >= score {
                      imageView.isOpaque = false
                      imageView.layer.opacity = 0
+                 } else {
+                     imageView.isOpaque = true
+                     imageView.layer.opacity = 100
                  }
              }
          }

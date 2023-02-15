@@ -30,10 +30,13 @@ class RecipesViewController: UIViewController {
     
     @IBAction func addRecipe(_ sender: Any) {
         viewModel.insertNewRecipe()
-        let indexPath = IndexPath(row: viewModel.recipes.count-1, section: 0)
-        tableView.beginUpdates()
-        tableView.insertRows(at: [indexPath], with: .automatic)
-        tableView.endUpdates()
+        viewModel.sortRecipes()
+        if let recipe = viewModel.recipes.lastObject as? Recipe,
+           let index = viewModel.recipes.indexOfRecipe(recipe) {
+            let indexPath = IndexPath(row: index, section: 0)
+            tableView.insertRows(at: [indexPath], with: .automatic)
+            tableView.reloadData()
+        }
     }
     
     // MARK: - Segue preparation

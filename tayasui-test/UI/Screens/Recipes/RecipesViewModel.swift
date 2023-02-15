@@ -29,7 +29,7 @@ class RecipesViewModel {
             TimeInterval.random(in: 30 * 60...200 * 60)
         }
         let duration = durations.randomElement() ?? TimeInterval(30 * 60)
-        let score = UInt8.random(in: 1..<3)
+        let score = UInt8.random(in: 1...3)
         let recipe = Recipe(
             name: "Nouvelle recette \(self.recipes.count + 1)",
             image: image ?? UIImage(named: "coco"),

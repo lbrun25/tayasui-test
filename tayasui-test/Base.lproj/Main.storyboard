@@ -60,7 +60,7 @@
                                                 </label>
                                                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="2eq-UZ-T2s">
                                                     <rect key="frame" x="353" y="13.666666666666668" width="24" height="17.333333333333332"/>
-                                                    <color key="tintColor" systemColor="systemGray3Color"/>
+                                                    <color key="tintColor" red="0.63529411764705879" green="0.63529411764705879" blue="0.63529411764705879" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                     <constraints>
                                                         <constraint firstAttribute="width" constant="24" id="1px-br-JSN"/>
                                                         <constraint firstAttribute="height" constant="24" id="dzX-WG-oij"/>
@@ -240,7 +240,7 @@
                                     </view>
                                 </subviews>
                                 <constraints>
-                                    <constraint firstAttribute="bottom" secondItem="1EK-5d-agI" secondAttribute="bottom" id="08a-5Z-XY2"/>
+                                    <constraint firstAttribute="bottom" secondItem="1EK-5d-agI" secondAttribute="bottom" constant="64" id="08a-5Z-XY2"/>
                                     <constraint firstItem="1EK-5d-agI" firstAttribute="top" secondItem="glz-Ri-62a" secondAttribute="top" id="7w2-bR-fPo"/>
                                     <constraint firstItem="1EK-5d-agI" firstAttribute="width" secondItem="iQ3-d6-bIw" secondAttribute="width" id="Hxf-y6-neH"/>
                                     <constraint firstItem="1EK-5d-agI" firstAttribute="leading" secondItem="glz-Ri-62a" secondAttribute="leading" id="ap3-AI-HiO"/>
@@ -321,9 +321,6 @@
         <image name="star" catalog="system" width="128" height="116"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-        </systemColor>
-        <systemColor name="systemGray3Color">
-            <color red="0.7803921568627451" green="0.7803921568627451" blue="0.80000000000000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>

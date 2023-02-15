@@ -24,6 +24,7 @@
 		B53C53DA299C255500F23902 /* RecipeDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B53C53D9299C255500F23902 /* RecipeDetailsViewController.swift */; };
 		B53C53DC299D0E7A00F23902 /* Notifications.swift in Sources */ = {isa = PBXBuildFile; fileRef = B53C53DB299D0E7A00F23902 /* Notifications.swift */; };
 		B53C53E2299D2BA400F23902 /* NSMutableArray+Sort.m in Sources */ = {isa = PBXBuildFile; fileRef = B53C53E1299D2BA400F23902 /* NSMutableArray+Sort.m */; };
+		B53C53E4299D490E00F23902 /* NSMutableArray+Recipe.swift in Sources */ = {isa = PBXBuildFile; fileRef = B53C53E3299D490E00F23902 /* NSMutableArray+Recipe.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -68,6 +69,7 @@
 		B53C53DF299D2B5500F23902 /* NSMutableArray+Sort.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSMutableArray+Sort.h"; sourceTree = "<group>"; };
 		B53C53E0299D2BA300F23902 /* tayasui-test-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "tayasui-test-Bridging-Header.h"; sourceTree = "<group>"; };
 		B53C53E1299D2BA400F23902 /* NSMutableArray+Sort.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSMutableArray+Sort.m"; sourceTree = "<group>"; };
+		B53C53E3299D490E00F23902 /* NSMutableArray+Recipe.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NSMutableArray+Recipe.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -209,6 +211,7 @@
 				B53C53DF299D2B5500F23902 /* NSMutableArray+Sort.h */,
 				B53C53E1299D2BA400F23902 /* NSMutableArray+Sort.m */,
 				B53C53E0299D2BA300F23902 /* tayasui-test-Bridging-Header.h */,
+				B53C53E3299D490E00F23902 /* NSMutableArray+Recipe.swift */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -348,6 +351,7 @@
 				B53C53DC299D0E7A00F23902 /* Notifications.swift in Sources */,
 				B53C53CE299BE8DF00F23902 /* MockedData.swift in Sources */,
 				B53C53DA299C255500F23902 /* RecipeDetailsViewController.swift in Sources */,
+				B53C53E4299D490E00F23902 /* NSMutableArray+Recipe.swift in Sources */,
 				B53C53D4299BFDF800F23902 /* RecipeDetailsViewModel.swift in Sources */,
 				B53C539E299BD34000F23902 /* RecipesViewController.swift in Sources */,
 				B53C539A299BD34000F23902 /* AppDelegate.swift in Sources */,
@@ -597,7 +601,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = AND4DY3VDQ;
 				GENERATE_INFOPLIST_FILE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 16.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = "lucien.brun.tayasui-testTests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -617,7 +621,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = AND4DY3VDQ;
 				GENERATE_INFOPLIST_FILE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 16.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = "lucien.brun.tayasui-testTests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -636,6 +640,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = AND4DY3VDQ;
 				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = "lucien.brun.tayasui-testUITests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -654,6 +659,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = AND4DY3VDQ;
 				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = "lucien.brun.tayasui-testUITests";
 				PRODUCT_NAME = "$(TARGET_NAME)";

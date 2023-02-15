@@ -8,27 +8,7 @@
 import Foundation
 import UIKit
 
-struct Recipe {
-    let name: String
-    let image: UIImage?
-    let ingredients: String
-    let duration: TimeInterval
-    let directions: String
-    let score: UInt8
-}
-
-extension Recipe: Equatable {
-    static func ==(lhs: Recipe, rhs: Recipe) -> Bool {
-        return lhs.name == rhs.name &&
-            lhs.image == rhs.image &&
-            lhs.ingredients == rhs.ingredients &&
-            lhs.duration == rhs.duration &&
-            lhs.directions == rhs.directions &&
-            lhs.score == rhs.score
-    }
-}
-
-@objc class RecipeLegacy: NSObject {
+@objc class Recipe: NSObject {
     @objc var name: String
     let image: UIImage?
     let ingredients: String
@@ -46,17 +26,21 @@ extension Recipe: Equatable {
     }
 }
 
-extension Array where Element == Recipe {
-    func convertToLegacy() -> [RecipeLegacy] {
-        var legacyRecipes: [RecipeLegacy] = []
-        for recipe in self {
-            let legacyRecipe = RecipeLegacy(
-                name: recipe.name, image: recipe.image,
-                ingredients: recipe.ingredients, duration: recipe.duration,
-                directions: recipe.directions, score: recipe.score
-            )
-            legacyRecipes.append(legacyRecipe)
+#if DEBUG
+extension Recipe {
+    static func generateRandomRecipes(numRecipes: Int) -> [Recipe] {
+        var recipes: [Recipe] = []
+        
+        for _ in 0..<numRecipes {
+            let name = "Recipe " + UUID().uuidString
+            let duration = TimeInterval(Int.random(in: 800...36000))
+            let score = UInt8(Int.random(in: 1...3))
+            
+            let recipe = Recipe(name: name, image: nil, ingredients: "", duration: duration, directions: "", score: score)
+            recipes.append(recipe)
         }
-        return legacyRecipes
+        
+        return recipes
     }
 }
+#endif

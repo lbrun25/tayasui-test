@@ -41,8 +41,8 @@ class RecipesViewController: UIViewController {
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "RecipeDetailsSegue",
             let vc = segue.destination as? RecipeDetailsViewController,
-            let selectedIndex = tableView.indexPathForSelectedRow {
-            let selectedItem = viewModel.recipes[selectedIndex.row]
+            let selectedIndex = tableView.indexPathForSelectedRow,
+            let selectedItem = viewModel.recipes[selectedIndex.row] as? Recipe {
             vc.viewModel = RecipeDetailsViewModel(recipe: selectedItem)
         }
     }
@@ -55,8 +55,8 @@ class RecipesViewController: UIViewController {
             let recipe = userInfo["recipe"] as? Recipe
             else { preconditionFailure("Expected a Recipe") }
         
-        if let index = viewModel.indexOfRecipe(recipe) {
-            viewModel.recipes.remove(at: index)
+        if let index = viewModel.recipes.indexOfRecipe(recipe) {
+            viewModel.recipes.removeObject(at: index)
             tableView.beginUpdates()
             tableView.deleteRows(at: [IndexPath(row: index, section: 0)], with: .automatic)
             tableView.endUpdates()
@@ -74,9 +74,8 @@ extension RecipesViewController: UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        if let cell = tableView.dequeueReusableCell(withIdentifier: "RecipeCell", for: indexPath) as? RecipeTableViewCell {
-            let recipe = viewModel.recipes[indexPath.row]
-            
+        if let cell = tableView.dequeueReusableCell(withIdentifier: "RecipeCell", for: indexPath) as? RecipeTableViewCell,
+            let recipe = viewModel.recipes[indexPath.row] as? Recipe {
             cell.nameLabel.text = recipe.name
             cell.durationLabel.text = viewModel.durationFormat(duration: recipe.duration)
             cell.setStarStackView(score: recipe.score)

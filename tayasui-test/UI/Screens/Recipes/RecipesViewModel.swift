@@ -9,7 +9,7 @@ import Foundation
 import UIKit
 
 class RecipesViewModel {
-    var recipes: [Recipe] = []
+    var recipes: NSMutableArray = []
     
     func durationFormat(duration: TimeInterval) -> String {
         let hours = Int(duration / 3600)
@@ -38,24 +38,16 @@ class RecipesViewModel {
             directions: "Lorem ipsum",
             score: score
         )
-        self.recipes.append(recipe)
-    }
-    
-    func indexOfRecipe(_ recipeToFind: Recipe) -> Int? {
-        let legacy = self.recipes.convertToLegacy()
-        
-        return self.recipes.firstIndex(where: { $0 == recipeToFind })
+        self.recipes.add(recipe)
     }
     
     func sortRecipes() {
-        let recipeArray = NSMutableArray(array: self.recipes.convertToLegacy())
-        print("recipeArray", recipeArray)
-        recipeArray.sortRecipes()
+        self.recipes.sortRecipes()
     }
     
     // MARK: - Initializer
     
     init() {
-        self.recipes = Recipe.mockedData
+        self.recipes = NSMutableArray(array: Recipe.mockedData)
     }
 }

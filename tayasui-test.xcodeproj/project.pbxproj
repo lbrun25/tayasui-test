@@ -9,13 +9,21 @@
 /* Begin PBXBuildFile section */
 		B53C539A299BD34000F23902 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B53C5399299BD34000F23902 /* AppDelegate.swift */; };
 		B53C539C299BD34000F23902 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B53C539B299BD34000F23902 /* SceneDelegate.swift */; };
-		B53C539E299BD34000F23902 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B53C539D299BD34000F23902 /* ViewController.swift */; };
+		B53C539E299BD34000F23902 /* RecipesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B53C539D299BD34000F23902 /* RecipesViewController.swift */; };
 		B53C53A1299BD34000F23902 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B53C539F299BD34000F23902 /* Main.storyboard */; };
 		B53C53A3299BD34200F23902 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B53C53A2299BD34200F23902 /* Assets.xcassets */; };
 		B53C53A6299BD34200F23902 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B53C53A4299BD34200F23902 /* LaunchScreen.storyboard */; };
 		B53C53B1299BD34300F23902 /* tayasui_testTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B53C53B0299BD34300F23902 /* tayasui_testTests.swift */; };
 		B53C53BB299BD34300F23902 /* tayasui_testUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B53C53BA299BD34300F23902 /* tayasui_testUITests.swift */; };
 		B53C53BD299BD34300F23902 /* tayasui_testUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B53C53BC299BD34300F23902 /* tayasui_testUITestsLaunchTests.swift */; };
+		B53C53CC299BE8BF00F23902 /* Recipe.swift in Sources */ = {isa = PBXBuildFile; fileRef = B53C53CB299BE8BF00F23902 /* Recipe.swift */; };
+		B53C53CE299BE8DF00F23902 /* MockedData.swift in Sources */ = {isa = PBXBuildFile; fileRef = B53C53CD299BE8DF00F23902 /* MockedData.swift */; };
+		B53C53D4299BFDF800F23902 /* RecipeDetailsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B53C53D3299BFDF800F23902 /* RecipeDetailsViewModel.swift */; };
+		B53C53D6299BFE0B00F23902 /* RecipesViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B53C53D5299BFE0B00F23902 /* RecipesViewModel.swift */; };
+		B53C53D8299C075F00F23902 /* RecipeTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B53C53D7299C075F00F23902 /* RecipeTableViewCell.swift */; };
+		B53C53DA299C255500F23902 /* RecipeDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B53C53D9299C255500F23902 /* RecipeDetailsViewController.swift */; };
+		B53C53DC299D0E7A00F23902 /* Notifications.swift in Sources */ = {isa = PBXBuildFile; fileRef = B53C53DB299D0E7A00F23902 /* Notifications.swift */; };
+		B53C53E2299D2BA400F23902 /* NSMutableArray+Sort.m in Sources */ = {isa = PBXBuildFile; fileRef = B53C53E1299D2BA400F23902 /* NSMutableArray+Sort.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -39,7 +47,7 @@
 		B53C5396299BD34000F23902 /* tayasui-test.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "tayasui-test.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		B53C5399299BD34000F23902 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B53C539B299BD34000F23902 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		B53C539D299BD34000F23902 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		B53C539D299BD34000F23902 /* RecipesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipesViewController.swift; sourceTree = "<group>"; };
 		B53C53A0299BD34000F23902 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		B53C53A2299BD34200F23902 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		B53C53A5299BD34200F23902 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -49,6 +57,17 @@
 		B53C53B6299BD34300F23902 /* tayasui-testUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "tayasui-testUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		B53C53BA299BD34300F23902 /* tayasui_testUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = tayasui_testUITests.swift; sourceTree = "<group>"; };
 		B53C53BC299BD34300F23902 /* tayasui_testUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = tayasui_testUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		B53C53CB299BE8BF00F23902 /* Recipe.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Recipe.swift; sourceTree = "<group>"; };
+		B53C53CD299BE8DF00F23902 /* MockedData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockedData.swift; sourceTree = "<group>"; };
+		B53C53D3299BFDF800F23902 /* RecipeDetailsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeDetailsViewModel.swift; sourceTree = "<group>"; };
+		B53C53D5299BFE0B00F23902 /* RecipesViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipesViewModel.swift; sourceTree = "<group>"; };
+		B53C53D7299C075F00F23902 /* RecipeTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeTableViewCell.swift; sourceTree = "<group>"; };
+		B53C53D9299C255500F23902 /* RecipeDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeDetailsViewController.swift; sourceTree = "<group>"; };
+		B53C53DB299D0E7A00F23902 /* Notifications.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Notifications.swift; sourceTree = "<group>"; };
+		B53C53DE299D2AE700F23902 /* Recipe.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Recipe.h; sourceTree = "<group>"; };
+		B53C53DF299D2B5500F23902 /* NSMutableArray+Sort.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSMutableArray+Sort.h"; sourceTree = "<group>"; };
+		B53C53E0299D2BA300F23902 /* tayasui-test-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "tayasui-test-Bridging-Header.h"; sourceTree = "<group>"; };
+		B53C53E1299D2BA400F23902 /* NSMutableArray+Sort.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSMutableArray+Sort.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -99,11 +118,13 @@
 		B53C5398299BD34000F23902 /* tayasui-test */ = {
 			isa = PBXGroup;
 			children = (
+				B53C53DD299D2ABC00F23902 /* Utils */,
+				B53C53CA299BE82700F23902 /* Models */,
+				B53C53C9299BE81A00F23902 /* UI */,
 				B53C5399299BD34000F23902 /* AppDelegate.swift */,
 				B53C539B299BD34000F23902 /* SceneDelegate.swift */,
-				B53C539D299BD34000F23902 /* ViewController.swift */,
-				B53C539F299BD34000F23902 /* Main.storyboard */,
 				B53C53A2299BD34200F23902 /* Assets.xcassets */,
+				B53C539F299BD34000F23902 /* Main.storyboard */,
 				B53C53A4299BD34200F23902 /* LaunchScreen.storyboard */,
 				B53C53A7299BD34200F23902 /* Info.plist */,
 			);
@@ -125,6 +146,71 @@
 				B53C53BC299BD34300F23902 /* tayasui_testUITestsLaunchTests.swift */,
 			);
 			path = "tayasui-testUITests";
+			sourceTree = "<group>";
+		};
+		B53C53C9299BE81A00F23902 /* UI */ = {
+			isa = PBXGroup;
+			children = (
+				B53C53CF299BF76100F23902 /* Screens */,
+				B53C53D0299BF78800F23902 /* Components */,
+			);
+			path = UI;
+			sourceTree = "<group>";
+		};
+		B53C53CA299BE82700F23902 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				B53C53CB299BE8BF00F23902 /* Recipe.swift */,
+				B53C53CD299BE8DF00F23902 /* MockedData.swift */,
+				B53C53DB299D0E7A00F23902 /* Notifications.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		B53C53CF299BF76100F23902 /* Screens */ = {
+			isa = PBXGroup;
+			children = (
+				B53C53D1299BF79C00F23902 /* Recipes */,
+				B53C53D2299BF7A900F23902 /* RecipeDetails */,
+			);
+			path = Screens;
+			sourceTree = "<group>";
+		};
+		B53C53D0299BF78800F23902 /* Components */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Components;
+			sourceTree = "<group>";
+		};
+		B53C53D1299BF79C00F23902 /* Recipes */ = {
+			isa = PBXGroup;
+			children = (
+				B53C539D299BD34000F23902 /* RecipesViewController.swift */,
+				B53C53D7299C075F00F23902 /* RecipeTableViewCell.swift */,
+				B53C53D5299BFE0B00F23902 /* RecipesViewModel.swift */,
+			);
+			path = Recipes;
+			sourceTree = "<group>";
+		};
+		B53C53D2299BF7A900F23902 /* RecipeDetails */ = {
+			isa = PBXGroup;
+			children = (
+				B53C53D3299BFDF800F23902 /* RecipeDetailsViewModel.swift */,
+				B53C53D9299C255500F23902 /* RecipeDetailsViewController.swift */,
+			);
+			path = RecipeDetails;
+			sourceTree = "<group>";
+		};
+		B53C53DD299D2ABC00F23902 /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				B53C53DE299D2AE700F23902 /* Recipe.h */,
+				B53C53DF299D2B5500F23902 /* NSMutableArray+Sort.h */,
+				B53C53E1299D2BA400F23902 /* NSMutableArray+Sort.m */,
+				B53C53E0299D2BA300F23902 /* tayasui-test-Bridging-Header.h */,
+			);
+			path = Utils;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -195,6 +281,7 @@
 				TargetAttributes = {
 					B53C5395299BD34000F23902 = {
 						CreatedOnToolsVersion = 14.2;
+						LastSwiftMigration = 1420;
 					};
 					B53C53AB299BD34300F23902 = {
 						CreatedOnToolsVersion = 14.2;
@@ -258,9 +345,17 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B53C539E299BD34000F23902 /* ViewController.swift in Sources */,
+				B53C53DC299D0E7A00F23902 /* Notifications.swift in Sources */,
+				B53C53CE299BE8DF00F23902 /* MockedData.swift in Sources */,
+				B53C53DA299C255500F23902 /* RecipeDetailsViewController.swift in Sources */,
+				B53C53D4299BFDF800F23902 /* RecipeDetailsViewModel.swift in Sources */,
+				B53C539E299BD34000F23902 /* RecipesViewController.swift in Sources */,
 				B53C539A299BD34000F23902 /* AppDelegate.swift in Sources */,
 				B53C539C299BD34000F23902 /* SceneDelegate.swift in Sources */,
+				B53C53D6299BFE0B00F23902 /* RecipesViewModel.swift in Sources */,
+				B53C53CC299BE8BF00F23902 /* Recipe.swift in Sources */,
+				B53C53D8299C075F00F23902 /* RecipeTableViewCell.swift in Sources */,
+				B53C53E2299D2BA400F23902 /* NSMutableArray+Sort.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -435,6 +530,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = AND4DY3VDQ;
@@ -445,14 +541,17 @@
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = "lucien.brun.tayasui-test";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.lucienbrun.tayasui-test";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_OBJC_BRIDGING_HEADER = "tayasui-test/Utils/tayasui-test-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -463,6 +562,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = AND4DY3VDQ;
@@ -473,14 +573,16 @@
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = "lucien.brun.tayasui-test";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.lucienbrun.tayasui-test";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_OBJC_BRIDGING_HEADER = "tayasui-test/Utils/tayasui-test-Bridging-Header.h";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};

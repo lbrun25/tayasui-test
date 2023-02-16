@@ -122,15 +122,10 @@
 		B53C5398299BD34000F23902 /* tayasui-test */ = {
 			isa = PBXGroup;
 			children = (
-				B53C53DD299D2ABC00F23902 /* Utils */,
 				B53C53CA299BE82700F23902 /* Models */,
-				B53C53C9299BE81A00F23902 /* UI */,
-				B53C5399299BD34000F23902 /* AppDelegate.swift */,
-				B53C539B299BD34000F23902 /* SceneDelegate.swift */,
-				B53C53A2299BD34200F23902 /* Assets.xcassets */,
-				B53C539F299BD34000F23902 /* Main.storyboard */,
-				B53C53A4299BD34200F23902 /* LaunchScreen.storyboard */,
-				B53C53A7299BD34200F23902 /* Info.plist */,
+				B53C53C9299BE81A00F23902 /* Application */,
+				B53C53DD299D2ABC00F23902 /* Utils */,
+				B53C53E9299DD0B000F23902 /* Resources */,
 			);
 			path = "tayasui-test";
 			sourceTree = "<group>";
@@ -152,12 +147,15 @@
 			path = "tayasui-testUITests";
 			sourceTree = "<group>";
 		};
-		B53C53C9299BE81A00F23902 /* UI */ = {
+		B53C53C9299BE81A00F23902 /* Application */ = {
 			isa = PBXGroup;
 			children = (
+				B53C5399299BD34000F23902 /* AppDelegate.swift */,
+				B53C539B299BD34000F23902 /* SceneDelegate.swift */,
+				B53C539F299BD34000F23902 /* Main.storyboard */,
 				B53C53CF299BF76100F23902 /* Screens */,
 			);
-			path = UI;
+			path = Application;
 			sourceTree = "<group>";
 		};
 		B53C53CA299BE82700F23902 /* Models */ = {
@@ -209,6 +207,16 @@
 				B53C53E3299D490E00F23902 /* NSMutableArray+Recipe.swift */,
 			);
 			path = Utils;
+			sourceTree = "<group>";
+		};
+		B53C53E9299DD0B000F23902 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				B53C53A7299BD34200F23902 /* Info.plist */,
+				B53C53A2299BD34200F23902 /* Assets.xcassets */,
+				B53C53A4299BD34200F23902 /* LaunchScreen.storyboard */,
+			);
+			path = Resources;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -535,7 +543,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = AND4DY3VDQ;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = "tayasui-test/Info.plist";
+				INFOPLIST_FILE = "tayasui-test/Resources/Info.plist";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
@@ -567,7 +575,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = AND4DY3VDQ;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = "tayasui-test/Info.plist";
+				INFOPLIST_FILE = "tayasui-test/Resources/Info.plist";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;

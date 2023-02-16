@@ -14,7 +14,7 @@ class RecipesViewModel {
     func durationFormat(duration: TimeInterval) -> String {
         let hours = Int(duration / 3600)
         let minutes = Int(duration.truncatingRemainder(dividingBy: 3600) / 60)
-
+        
         if hours > 0 {
             return "\(hours)h\(minutes) mn"
         } else {

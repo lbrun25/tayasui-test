@@ -25,6 +25,7 @@
 		B53C53DC299D0E7A00F23902 /* Notifications.swift in Sources */ = {isa = PBXBuildFile; fileRef = B53C53DB299D0E7A00F23902 /* Notifications.swift */; };
 		B53C53E2299D2BA400F23902 /* NSMutableArray+Sort.m in Sources */ = {isa = PBXBuildFile; fileRef = B53C53E1299D2BA400F23902 /* NSMutableArray+Sort.m */; };
 		B53C53E4299D490E00F23902 /* NSMutableArray+Recipe.swift in Sources */ = {isa = PBXBuildFile; fileRef = B53C53E3299D490E00F23902 /* NSMutableArray+Recipe.swift */; };
+		B53C53E8299DC8EC00F23902 /* PreviewRecipeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B53C53E7299DC8EC00F23902 /* PreviewRecipeViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -70,6 +71,7 @@
 		B53C53E0299D2BA300F23902 /* tayasui-test-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "tayasui-test-Bridging-Header.h"; sourceTree = "<group>"; };
 		B53C53E1299D2BA400F23902 /* NSMutableArray+Sort.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSMutableArray+Sort.m"; sourceTree = "<group>"; };
 		B53C53E3299D490E00F23902 /* NSMutableArray+Recipe.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NSMutableArray+Recipe.swift"; sourceTree = "<group>"; };
+		B53C53E7299DC8EC00F23902 /* PreviewRecipeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PreviewRecipeViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -154,7 +156,6 @@
 			isa = PBXGroup;
 			children = (
 				B53C53CF299BF76100F23902 /* Screens */,
-				B53C53D0299BF78800F23902 /* Components */,
 			);
 			path = UI;
 			sourceTree = "<group>";
@@ -178,19 +179,13 @@
 			path = Screens;
 			sourceTree = "<group>";
 		};
-		B53C53D0299BF78800F23902 /* Components */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Components;
-			sourceTree = "<group>";
-		};
 		B53C53D1299BF79C00F23902 /* Recipes */ = {
 			isa = PBXGroup;
 			children = (
 				B53C539D299BD34000F23902 /* RecipesViewController.swift */,
 				B53C53D7299C075F00F23902 /* RecipeTableViewCell.swift */,
 				B53C53D5299BFE0B00F23902 /* RecipesViewModel.swift */,
+				B53C53E7299DC8EC00F23902 /* PreviewRecipeViewController.swift */,
 			);
 			path = Recipes;
 			sourceTree = "<group>";
@@ -354,6 +349,7 @@
 				B53C53E4299D490E00F23902 /* NSMutableArray+Recipe.swift in Sources */,
 				B53C53D4299BFDF800F23902 /* RecipeDetailsViewModel.swift in Sources */,
 				B53C539E299BD34000F23902 /* RecipesViewController.swift in Sources */,
+				B53C53E8299DC8EC00F23902 /* PreviewRecipeViewController.swift in Sources */,
 				B53C539A299BD34000F23902 /* AppDelegate.swift in Sources */,
 				B53C539C299BD34000F23902 /* SceneDelegate.swift in Sources */,
 				B53C53D6299BFE0B00F23902 /* RecipesViewModel.swift in Sources */,

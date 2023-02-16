@@ -16,4 +16,13 @@ extension NSMutableArray {
             return nil
         }.first
     }
+    
+    func indexOfRecipe(byName name: String) -> Int? {
+        for i in 0..<self.count {
+            if let recipe = self[i] as? Recipe, recipe.name == name {
+                return i
+            }
+        }
+        return nil
+    }
 }

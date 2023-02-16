@@ -24,8 +24,8 @@
                        image:(UIImage *)image
                  ingredients:(NSString *)ingredients
                     duration:(NSTimeInterval)duration
-                   directions:(NSString *)directions
-                        score:(uint8_t)score;
+                  directions:(NSString *)directions
+                       score:(uint8_t)score;
 
 @end
 

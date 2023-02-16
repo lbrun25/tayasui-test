@@ -85,8 +85,8 @@
                                             <outlet property="nameLabel" destination="0Ma-a6-tIj" id="ZSP-5p-XoI"/>
                                             <outlet property="starsStackView" destination="kdQ-x9-PBn" id="F5c-vw-AO0"/>
                                             <segue destination="b7Q-IY-r1y" kind="show" identifier="RecipeDetailsSegue" id="g5u-VG-NQO">
-                                                <segue key="commit" inheritsFrom="parent" id="H09-fo-aqI"/>
-                                                <segue key="preview" inheritsFrom="commit" id="lMK-JW-ZxR"/>
+                                                <segue key="commit" inheritsFrom="parent" id="zVe-sY-nPi"/>
+                                                <segue key="preview" inheritsFrom="commit" id="sJ8-tO-fvY"/>
                                             </segue>
                                         </connections>
                                     </tableViewCell>
@@ -127,7 +127,7 @@
         <!--Recipe Details View Controller-->
         <scene sceneID="V8O-fR-Bby">
             <objects>
-                <viewController id="b7Q-IY-r1y" customClass="RecipeDetailsViewController" customModule="tayasui_test" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="RecipeDetailsViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="b7Q-IY-r1y" customClass="RecipeDetailsViewController" customModule="tayasui_test" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Lw6-ht-et5">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -262,6 +262,7 @@
                                         </connections>
                                     </barButtonItem>
                                 </items>
+                                <toolbarAppearance key="standardAppearance" backgroundEffect="regular"/>
                             </toolbar>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="jrv-bZ-90Q"/>

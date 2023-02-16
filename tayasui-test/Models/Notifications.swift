@@ -8,7 +8,7 @@
 import Foundation
 
 extension NSNotification.Name {
-
+    
     static let recipeDeleted = NSNotification.Name("com.lucienbrun.tayasui-test.RecipeDeleted")
-
+    
 }

@@ -8,6 +8,8 @@
 #import "NSMutableArray+Sort.h"
 #import "Recipe.h"
 
+@class Recipe;
+
 @implementation NSMutableArray (Sort)
 
 /**
@@ -15,18 +17,18 @@
  - By descending score
  - By decreasing duration
  - By ascending alphabetical order of name
-
+ 
  The resulting array is sorted in the order indicated by the three criteria using the Quick Sort algorithm.
-*/
+ */
 - (void)sortRecipes {
     [self quickSortWithLeft:0 right:(int)self.count - 1];
 }
 
 /**
  Inserts a given recipe object at the end of the NSMutableArray object.
-
+ 
  @param recipe A Recipe object to be inserted into the NSMutableArray.
-*/
+ */
 - (void)insertRecipe:(Recipe *)recipe {
     [self addObject:recipe];
 }
@@ -35,9 +37,9 @@
  Sorts the recipes array using the QuickSort algorithm, known for its efficient average-case performance and is often used in applications where a fast sorting algorithm is required.
  
  This fonction recursively sorts the left sub-array and the right sub-array by calling itself with the left and right indices adjusted accordingly. This continues until all sub-arrays have been sorted.
-
+ 
  At the end of the sorting process, the entire recipes array will be sorted in descending order by score, descending order by duration, and ascending alphabetical order by name.
-
+ 
  @param left The leftmost index of the sub-array to sort.
  @param right The rightmost index of the sub-array to sort.
  */

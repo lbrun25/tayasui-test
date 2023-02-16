@@ -102,8 +102,13 @@ extension RecipesViewController: UITableViewDelegate {
         guard let recipe = viewModel.recipes[indexPath.row] as? Recipe else { return nil }
         let identifier = NSString(string: recipe.name)
         
-        return UIContextMenuConfiguration(identifier: identifier, previewProvider: {
-            return PreviewRecipeViewController(recipe: recipe)
+        return UIContextMenuConfiguration(identifier: identifier, previewProvider: { [weak self] in
+            guard let self = self,
+                  let vc = self.storyboard?.instantiateViewController(withIdentifier: "RecipePreviewController") as? RecipePreviewController else {
+                return nil
+            }
+            vc.recipe = recipe
+            return vc
         }, actionProvider: { suggestedActions in
             let share = UIAction(title: "Partager", image: UIImage(systemName: "square.and.arrow.up")) { action in
                 // Show system share sheet

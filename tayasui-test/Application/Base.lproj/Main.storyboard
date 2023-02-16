@@ -19,7 +19,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="R9i-eO-atX">
-                                <rect key="frame" x="0.0" y="119" width="393" height="650"/>
+                                <rect key="frame" x="0.0" y="171" width="393" height="603"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="RecipeCell" id="WKR-xV-Kgk" customClass="RecipeTableViewCell" customModule="tayasui_test" customModuleProvider="target">
@@ -93,7 +93,7 @@
                                 </prototypes>
                             </tableView>
                             <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="MeR-cU-s84">
-                                <rect key="frame" x="0.0" y="769" width="393" height="49"/>
+                                <rect key="frame" x="0.0" y="774" width="393" height="44"/>
                                 <items>
                                     <barButtonItem systemItem="add" id="gXS-gQ-VOD">
                                         <connections>
@@ -309,6 +309,92 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="FN0-bk-qre" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="130.53435114503816" y="-27.464788732394368"/>
+        </scene>
+        <!--Recipe Preview Controller-->
+        <scene sceneID="ndi-nY-0Za">
+            <objects>
+                <viewController storyboardIdentifier="RecipePreviewController" id="KFX-0C-f7g" customClass="RecipePreviewController" customModule="tayasui_test" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="6ge-Xn-vKv">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Gaspacho" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fzH-ss-IYv">
+                                <rect key="frame" x="24" y="75" width="195" height="40.666666666666657"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="34"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="OdX-Ie-fXI">
+                                <rect key="frame" x="24" y="131.66666666666663" width="195" height="294"/>
+                                <subviews>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="gaspacho" translatesAutoresizingMaskIntoConstraints="NO" id="w3q-cc-pI4">
+                                        <rect key="frame" x="0.0" y="0.0" width="294" height="294"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="294" id="sEc-dD-Din"/>
+                                            <constraint firstAttribute="width" secondItem="w3q-cc-pI4" secondAttribute="height" multiplier="1:1" id="yMZ-LT-aYq"/>
+                                        </constraints>
+                                    </imageView>
+                                </subviews>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="bottom" secondItem="w3q-cc-pI4" secondAttribute="bottom" id="I4g-eK-yue"/>
+                                    <constraint firstItem="w3q-cc-pI4" firstAttribute="top" secondItem="OdX-Ie-fXI" secondAttribute="top" id="P5U-vs-MZo"/>
+                                    <constraint firstItem="w3q-cc-pI4" firstAttribute="leading" secondItem="OdX-Ie-fXI" secondAttribute="leading" id="j0y-5F-wXa"/>
+                                    <constraint firstAttribute="trailing" secondItem="w3q-cc-pI4" secondAttribute="trailing" id="ynR-JH-PZQ"/>
+                                </constraints>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="tgH-dk-NTv">
+                                <rect key="frame" x="24" y="441.66666666666669" width="195" height="66"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Ingrédients" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Y35-8T-Q4R">
+                                        <rect key="frame" x="0.0" y="8" width="90.333333333333329" height="21"/>
+                                        <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Tomate, Ail, Basilic, Sel" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gv2-a8-9dg">
+                                        <rect key="frame" x="0.0" y="37" width="175" height="21"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstItem="Y35-8T-Q4R" firstAttribute="top" secondItem="tgH-dk-NTv" secondAttribute="top" constant="8" id="2zV-u6-5nw"/>
+                                    <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="gv2-a8-9dg" secondAttribute="trailing" constant="20" symbolic="YES" id="DFS-In-KKG"/>
+                                    <constraint firstItem="Y35-8T-Q4R" firstAttribute="leading" secondItem="tgH-dk-NTv" secondAttribute="leading" id="KaI-Qc-xrf"/>
+                                    <constraint firstItem="gv2-a8-9dg" firstAttribute="top" secondItem="Y35-8T-Q4R" secondAttribute="bottom" constant="8" id="eHE-4H-TsC"/>
+                                    <constraint firstItem="gv2-a8-9dg" firstAttribute="leading" secondItem="tgH-dk-NTv" secondAttribute="leading" id="f8U-8k-uvr"/>
+                                    <constraint firstAttribute="bottom" secondItem="gv2-a8-9dg" secondAttribute="bottom" constant="8" id="ja4-cR-v5G"/>
+                                    <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="Y35-8T-Q4R" secondAttribute="trailing" constant="20" symbolic="YES" id="wb6-q2-rxD"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="cLb-Et-2lx"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="fzH-ss-IYv" firstAttribute="leading" secondItem="cLb-Et-2lx" secondAttribute="leading" constant="24" id="GXv-qg-dvz"/>
+                            <constraint firstItem="OdX-Ie-fXI" firstAttribute="leading" secondItem="cLb-Et-2lx" secondAttribute="leading" constant="24" id="KW7-OZ-bc9"/>
+                            <constraint firstItem="tgH-dk-NTv" firstAttribute="top" secondItem="OdX-Ie-fXI" secondAttribute="bottom" constant="16" id="Me5-CJ-fdc"/>
+                            <constraint firstItem="cLb-Et-2lx" firstAttribute="trailing" relation="lessThanOrEqual" secondItem="fzH-ss-IYv" secondAttribute="trailing" constant="24" id="Zaa-oF-jur"/>
+                            <constraint firstItem="tgH-dk-NTv" firstAttribute="leading" secondItem="cLb-Et-2lx" secondAttribute="leading" constant="24" id="a20-CL-vFe"/>
+                            <constraint firstItem="fzH-ss-IYv" firstAttribute="top" secondItem="cLb-Et-2lx" secondAttribute="top" constant="16" id="ibM-q3-GsA"/>
+                            <constraint firstItem="cLb-Et-2lx" firstAttribute="trailing" secondItem="tgH-dk-NTv" secondAttribute="trailing" constant="24" id="jKI-ue-ZO3"/>
+                            <constraint firstItem="OdX-Ie-fXI" firstAttribute="top" secondItem="fzH-ss-IYv" secondAttribute="bottom" constant="16" id="kWX-ba-6Vb"/>
+                            <constraint firstItem="cLb-Et-2lx" firstAttribute="trailing" secondItem="OdX-Ie-fXI" secondAttribute="trailing" constant="24" id="tur-DJ-6kL"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="imageView" destination="w3q-cc-pI4" id="vPz-Y6-S7q"/>
+                        <outlet property="ingredients" destination="gv2-a8-9dg" id="I67-2f-mgY"/>
+                        <outlet property="ingredientsTitle" destination="Y35-8T-Q4R" id="V3U-ld-ce2"/>
+                        <outlet property="titleLabel" destination="fzH-ss-IYv" id="aHI-nK-okh"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="73T-bO-cKY" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1053" y="698"/>
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>

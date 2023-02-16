@@ -19,7 +19,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="R9i-eO-atX">
-                                <rect key="frame" x="0.0" y="171" width="393" height="603"/>
+                                <rect key="frame" x="0.0" y="119" width="393" height="650"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="RecipeCell" id="WKR-xV-Kgk" customClass="RecipeTableViewCell" customModule="tayasui_test" customModuleProvider="target">
@@ -92,8 +92,8 @@
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
-                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="MeR-cU-s84">
-                                <rect key="frame" x="0.0" y="774" width="393" height="44"/>
+                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translucent="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MeR-cU-s84">
+                                <rect key="frame" x="0.0" y="769" width="393" height="49"/>
                                 <items>
                                     <barButtonItem systemItem="add" id="gXS-gQ-VOD">
                                         <connections>
@@ -101,6 +101,7 @@
                                         </connections>
                                     </barButtonItem>
                                 </items>
+                                <color key="barTintColor" red="0.94901960784313721" green="0.94901960784313721" blue="0.96862745098039216" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             </toolbar>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
@@ -249,8 +250,8 @@
                                 <viewLayoutGuide key="contentLayoutGuide" id="Zfj-1x-3OM"/>
                                 <viewLayoutGuide key="frameLayoutGuide" id="iQ3-d6-bIw"/>
                             </scrollView>
-                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ZUZ-b5-tEZ">
-                                <rect key="frame" x="0.0" y="774" width="393" height="44"/>
+                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translucent="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZUZ-b5-tEZ">
+                                <rect key="frame" x="0.0" y="769" width="393" height="49"/>
                                 <items>
                                     <barButtonItem title="Item" image="square.and.arrow.up" catalog="system" id="TBT-9a-kiy" userLabel="Share"/>
                                     <barButtonItem width="42" style="plain" systemItem="fixedSpace" id="caV-Kc-E7E"/>
@@ -262,7 +263,7 @@
                                         </connections>
                                     </barButtonItem>
                                 </items>
-                                <toolbarAppearance key="standardAppearance" backgroundEffect="regular"/>
+                                <color key="barTintColor" red="0.94901960784313721" green="0.94901960784313721" blue="0.96862745098039216" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             </toolbar>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="jrv-bZ-90Q"/>

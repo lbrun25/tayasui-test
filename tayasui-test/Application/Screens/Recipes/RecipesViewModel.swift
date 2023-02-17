@@ -11,16 +11,13 @@ import UIKit
 class RecipesViewModel {
     var recipes: NSMutableArray = []
     
-    func durationFormat(duration: TimeInterval) -> String {
-        let hours = Int(duration / 3600)
-        let minutes = Int(duration.truncatingRemainder(dividingBy: 3600) / 60)
-        
-        if hours > 0 {
-            return "\(hours)h\(minutes) mn"
-        } else {
-            return "\(minutes) mn"
-        }
+    // MARK: - Initializer
+    
+    init() {
+        self.recipes = NSMutableArray(array: Recipe.mockedData)
     }
+    
+    // MARK: - Action methods
     
     func insertNewRecipe() {
         let image = Recipe.allImages.randomElement()
@@ -45,9 +42,51 @@ class RecipesViewModel {
         self.recipes.sortRecipes()
     }
     
-    // MARK: - Initializer
+    func addRecipeIndexPaths() -> [IndexPath] {
+        if let recipe = recipes.lastObject as? Recipe,
+           let index = recipes.indexOfRecipe(recipe) {
+            let indexPath = IndexPath(row: index, section: 0)
+            return [indexPath]
+        }
+        return []
+    }
     
-    init() {
-        self.recipes = NSMutableArray(array: Recipe.mockedData)
+    func deleteRecipeIndexPaths(recipe: Recipe) -> [IndexPath] {
+        if let index = recipes.indexOfRecipe(recipe) {
+            recipes.removeObject(at: index)
+            return [IndexPath(row: index, section: 0)]
+        }
+        return []
+    }
+    
+    // MARK: - UI text
+    
+    func viewTitle() -> String {
+        return "Recettes"
+    }
+    
+    func shareTitle() -> String {
+        return "Partager"
+    }
+    
+    func editTitle() -> String {
+        return "Éditer"
+    }
+    
+    func deleteTitle() -> String {
+        return "Supprimer"
+    }
+    
+    // MARK: - UI helper methods
+    
+    func durationFormat(duration: TimeInterval) -> String {
+        let hours = Int(duration / 3600)
+        let minutes = Int(duration.truncatingRemainder(dividingBy: 3600) / 60)
+        
+        if hours > 0 {
+            return "\(hours)h\(minutes) mn"
+        } else {
+            return "\(minutes) mn"
+        }
     }
 }

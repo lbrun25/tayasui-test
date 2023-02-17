@@ -67,7 +67,7 @@
  */
 - (int)partitionWithLeft:(int)left right:(int)right {
     Recipe *pivot = [self objectAtIndex:right];
-    int lastLeftIndex = left - 1;
+    int i = left - 1;
     
     for (int j = left; j < right; j++) {
         Recipe *recipe = [self objectAtIndex:j];
@@ -76,14 +76,14 @@
         if (recipe.score > pivot.score
             || (recipe.score == pivot.score && recipe.duration > pivot.duration)
             || (recipe.score == pivot.score && recipe.duration == pivot.duration && [recipe.name compare:pivot.name] == NSOrderedAscending)) {
-            lastLeftIndex++;
-            [self exchangeObjectAtIndex:lastLeftIndex withObjectAtIndex:j];
+            i++;
+            [self exchangeObjectAtIndex:i withObjectAtIndex:j];
         }
     }
     
     // Swap the pivot element into its final position and return the pivot index.
-    [self exchangeObjectAtIndex:lastLeftIndex + 1 withObjectAtIndex:right];
-    return lastLeftIndex + 1;
+    [self exchangeObjectAtIndex:i + 1 withObjectAtIndex:right];
+    return i + 1;
 }
 
 @end

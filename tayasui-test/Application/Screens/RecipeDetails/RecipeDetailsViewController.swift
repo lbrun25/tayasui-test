@@ -38,15 +38,15 @@ class RecipeDetailsViewController: UIViewController {
     }
     
     /// Shows an alert controller to confirm the deletion of a recipe.
-    func confirmDelete() {
-        let alertController = UIAlertController(title: "Title", message: "Message", preferredStyle: .alert)
+    private func confirmDelete() {
+        let alertController = UIAlertController(title: viewModel?.alertDeletionTitle(), message: viewModel?.alertDeletionMessage(), preferredStyle: .alert)
         
-        let confirmAction = UIAlertAction(title: "Destroy", style: .destructive) { [weak self] _ in
+        let confirmAction = UIAlertAction(title: viewModel?.confirmDeletionTitle(), style: .destructive) { [weak self] _ in
             guard let self = self else { return }
             self.viewModel?.sendDeleteNotification()
             self.navigationController?.popViewController(animated: true)
         }
-        let cancelAction = UIAlertAction(title: "Cancel", style: .cancel)
+        let cancelAction = UIAlertAction(title: viewModel?.cancelDeletionTitle(), style: .cancel)
         
         alertController.addAction(confirmAction)
         alertController.addAction(cancelAction)

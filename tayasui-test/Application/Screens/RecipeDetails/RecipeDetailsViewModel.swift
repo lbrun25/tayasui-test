@@ -16,6 +16,12 @@ class RecipeDetailsViewModel {
         self.recipe = recipe
     }
     
+    // MARK: - Action methods
+    
+    func sendDeleteNotification() {
+        NotificationCenter.default.post(name: .recipeDeleted, object: self, userInfo: ["recipe": recipe])
+    }
+    
     // MARK: - UI helper methods
     
     func durationFormat(duration: TimeInterval) -> String {
@@ -29,6 +35,8 @@ class RecipeDetailsViewModel {
         }
     }
     
+    // MARK: - UI text
+    
     func ingredientsTitle() -> String {
         return "Ingrédients"
     }
@@ -37,9 +45,20 @@ class RecipeDetailsViewModel {
         return "Préparation"
     }
     
-    // MARK: - Action methods
-    
-    func sendDeleteNotification() {
-        NotificationCenter.default.post(name: .recipeDeleted, object: self, userInfo: ["recipe": recipe])
+    func confirmDeletionTitle() -> String {
+        return "Destroy"
     }
+    
+    func cancelDeletionTitle() -> String {
+        return "Cancel"
+    }
+    
+    func alertDeletionTitle() -> String {
+        return "Title"
+    }
+    
+    func alertDeletionMessage() -> String {
+        return "Message"
+    }
+    
 }

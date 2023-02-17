@@ -10,14 +10,14 @@ import UIKit
 class RecipesViewController: UIViewController {
     @IBOutlet weak var tableView: UITableView!
     
-    let viewModel = RecipesViewModel()
+    private let viewModel = RecipesViewModel()
     
     // MARK: - View life cycle
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        self.title = "Recettes"
+        self.title = viewModel.viewTitle()
         
         tableView.delegate = self
         tableView.dataSource = self
@@ -31,12 +31,9 @@ class RecipesViewController: UIViewController {
     @IBAction func addRecipe(_ sender: Any) {
         viewModel.insertNewRecipe()
         viewModel.sortRecipes()
-        if let recipe = viewModel.recipes.lastObject as? Recipe,
-           let index = viewModel.recipes.indexOfRecipe(recipe) {
-            let indexPath = IndexPath(row: index, section: 0)
-            tableView.insertRows(at: [indexPath], with: .automatic)
-            tableView.reloadData()
-        }
+        let indexPaths = viewModel.addRecipeIndexPaths()
+        tableView.insertRows(at: indexPaths, with: .automatic)
+        tableView.reloadData()
     }
     
     // MARK: - Segue preparation
@@ -61,13 +58,11 @@ class RecipesViewController: UIViewController {
         deleteRecipeTableViewCell(recipe: recipe)
     }
     
-    func deleteRecipeTableViewCell(recipe: Recipe) {
-        if let index = viewModel.recipes.indexOfRecipe(recipe) {
-            viewModel.recipes.removeObject(at: index)
-            tableView.beginUpdates()
-            tableView.deleteRows(at: [IndexPath(row: index, section: 0)], with: .automatic)
-            tableView.endUpdates()
-        }
+    private func deleteRecipeTableViewCell(recipe: Recipe) {
+        let indexPaths = viewModel.deleteRecipeIndexPaths(recipe: recipe)
+        tableView.beginUpdates()
+        tableView.deleteRows(at: indexPaths, with: .automatic)
+        tableView.endUpdates()
     }
     
 }
@@ -109,14 +104,15 @@ extension RecipesViewController: UITableViewDelegate {
             }
             vc.recipe = recipe
             return vc
-        }, actionProvider: { suggestedActions in
-            let share = UIAction(title: "Partager", image: UIImage(systemName: "square.and.arrow.up")) { action in
+        }, actionProvider: { [weak self] suggestedActions in
+            guard let self = self else { return nil }
+            let share = UIAction(title: self.viewModel.shareTitle(), image: UIImage(systemName: "square.and.arrow.up")) { action in
                 // Show system share sheet
             }
-            let edit = UIAction(title: "Éditer", image: UIImage(systemName: "square.and.pencil")) { action in
+            let edit = UIAction(title: self.viewModel.editTitle(), image: UIImage(systemName: "square.and.pencil")) { action in
                 // Perform edit
             }
-            let delete = UIAction(title: "Supprimer", image: UIImage(systemName: "trash"), attributes: .destructive) { [weak self] action in
+            let delete = UIAction(title: self.viewModel.deleteTitle(), image: UIImage(systemName: "trash"), attributes: .destructive) { [weak self] action in
                 guard let self = self else { return }
                 self.deleteRecipeTableViewCell(recipe: recipe)
             }
